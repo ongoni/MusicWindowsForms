@@ -22,7 +22,7 @@ namespace MusicCatalog {
             Data.Songs.Add(new Song(ArtistTextBox.Text, SongNameTextBox.Text));
         }
 
-        private void CancelButton_Click(object sender, EventArgs e) {
+        private void SongFormCancelButton_Click_1(object sender, EventArgs e) {
             Close();
         }
     }

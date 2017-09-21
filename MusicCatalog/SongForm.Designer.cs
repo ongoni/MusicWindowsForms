@@ -28,7 +28,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SongNameTextBox = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.SongFormCancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ArtistLabel
@@ -75,25 +75,24 @@
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // CancelButton
+            // SongFormCancelButton
             // 
-            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelButton.Location = new System.Drawing.Point(146, 90);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(127, 23);
-            this.CancelButton.TabIndex = 5;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.SongFormCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.SongFormCancelButton.Location = new System.Drawing.Point(146, 90);
+            this.SongFormCancelButton.Name = "SongFormCancelButton";
+            this.SongFormCancelButton.Size = new System.Drawing.Size(127, 23);
+            this.SongFormCancelButton.TabIndex = 5;
+            this.SongFormCancelButton.Text = "Cancel";
+            this.SongFormCancelButton.UseVisualStyleBackColor = true;
+            this.SongFormCancelButton.Click += new System.EventHandler(this.SongFormCancelButton_Click_1);
             // 
             // SongForm
             // 
             this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(284, 124);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.SongFormCancelButton);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.SongNameTextBox);
             this.Controls.Add(this.label1);
@@ -118,6 +117,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SongNameTextBox;
         private System.Windows.Forms.Button OkButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button SongFormCancelButton;
     }
 }
