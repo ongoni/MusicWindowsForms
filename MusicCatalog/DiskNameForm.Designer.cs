@@ -53,6 +53,7 @@
             this.OkButton.TabIndex = 2;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // DiskNameFormCancelButton
             // 
@@ -63,6 +64,7 @@
             this.DiskNameFormCancelButton.TabIndex = 3;
             this.DiskNameFormCancelButton.Text = "Cancel";
             this.DiskNameFormCancelButton.UseVisualStyleBackColor = true;
+            this.DiskNameFormCancelButton.Click += new System.EventHandler(this.DiskNameFormCancelButton_Click);
             // 
             // DiskNameForm
             // 

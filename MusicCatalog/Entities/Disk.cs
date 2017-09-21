@@ -14,6 +14,11 @@ namespace Entities {
             disk = new List<Song>();
         }
 
+        public Disk(string name) {
+            Name = name;
+            disk = new List<Song>();
+        }
+
         public List<Song> enumerator {
             get { return disk; }
         }

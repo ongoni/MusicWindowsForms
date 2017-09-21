@@ -25,5 +25,7 @@ namespace MusicCatalog {
         private void SongFormCancelButton_Click_1(object sender, EventArgs e) {
             Close();
         }
+
     }
+
 }

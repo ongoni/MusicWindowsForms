@@ -14,6 +14,11 @@ namespace Entities {
             catalog = new List<Disk>();
         }
 
+        public Catalog(string name) {
+            Name = name;
+            catalog = new List<Disk>();
+        }
+
         public List<Disk> enumerator {
             get { return catalog; }
         }
