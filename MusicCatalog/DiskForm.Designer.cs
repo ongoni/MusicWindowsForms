@@ -97,6 +97,7 @@
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.DiskNameTextBox);
             this.Controls.Add(this.DiskNameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 163);
             this.MinimizeBox = false;

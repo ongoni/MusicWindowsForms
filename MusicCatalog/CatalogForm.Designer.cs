@@ -78,6 +78,7 @@
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.CatalogNameTextBox);
             this.Controls.Add(this.CatalogNameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 123);
             this.MinimizeBox = false;

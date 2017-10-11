@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Entities;
-using System.Xml.Serialization;
 
 namespace Classes {
 
+    [Serializable]
     public class Data {
 
         public Data() {

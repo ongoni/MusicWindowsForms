@@ -62,7 +62,7 @@
             // 
             // SongNameTextBox
             // 
-            this.SongNameTextBox.Location = new System.Drawing.Point(15, 142);
+            this.SongNameTextBox.Location = new System.Drawing.Point(12, 142);
             this.SongNameTextBox.Name = "SongNameTextBox";
             this.SongNameTextBox.Size = new System.Drawing.Size(260, 20);
             this.SongNameTextBox.TabIndex = 4;
@@ -136,6 +136,7 @@
             this.Controls.Add(this.SongNameLabel);
             this.Controls.Add(this.ArtistNameTextBox);
             this.Controls.Add(this.ArtistNameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 241);
             this.MinimizeBox = false;
