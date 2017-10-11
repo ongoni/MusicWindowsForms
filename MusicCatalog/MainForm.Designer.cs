@@ -40,7 +40,7 @@
             this.AddCatalogButton.Location = new System.Drawing.Point(12, 12);
             this.AddCatalogButton.Name = "AddCatalogButton";
             this.AddCatalogButton.Size = new System.Drawing.Size(100, 23);
-            this.AddCatalogButton.TabIndex = 0;
+            this.AddCatalogButton.TabIndex = 1;
             this.AddCatalogButton.Text = "Add catalog";
             this.AddCatalogButton.UseVisualStyleBackColor = true;
             this.AddCatalogButton.Click += new System.EventHandler(this.AddCatalogButton_Click);
@@ -50,7 +50,7 @@
             this.AddDiskButton.Location = new System.Drawing.Point(12, 41);
             this.AddDiskButton.Name = "AddDiskButton";
             this.AddDiskButton.Size = new System.Drawing.Size(100, 23);
-            this.AddDiskButton.TabIndex = 1;
+            this.AddDiskButton.TabIndex = 2;
             this.AddDiskButton.Text = "Add disk";
             this.AddDiskButton.UseVisualStyleBackColor = true;
             this.AddDiskButton.Click += new System.EventHandler(this.AddDiskButton_Click);
@@ -60,7 +60,7 @@
             this.AddSongButton.Location = new System.Drawing.Point(12, 70);
             this.AddSongButton.Name = "AddSongButton";
             this.AddSongButton.Size = new System.Drawing.Size(100, 23);
-            this.AddSongButton.TabIndex = 2;
+            this.AddSongButton.TabIndex = 3;
             this.AddSongButton.Text = "Add song";
             this.AddSongButton.UseVisualStyleBackColor = true;
             this.AddSongButton.Click += new System.EventHandler(this.AddSongButton_Click);
@@ -77,7 +77,7 @@
             this.SaveButton.Location = new System.Drawing.Point(12, 131);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(100, 23);
-            this.SaveButton.TabIndex = 5;
+            this.SaveButton.TabIndex = 4;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);

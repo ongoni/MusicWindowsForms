@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Entities {
 
     [Serializable]
     public class Disk {
 
-        public List<Song> Songs;
-
         public string Name { get; set; }
+
+        public List<Song> Songs;
 
         public Disk() {
             Songs = new List<Song>();
@@ -19,6 +20,7 @@ namespace Entities {
             Songs = new List<Song>();
         }
 
+        [XmlIgnore]
         public List<Song> enumerator {
             get { return Songs; }
         }

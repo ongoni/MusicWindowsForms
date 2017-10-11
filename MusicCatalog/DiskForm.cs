@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 using Entities;
-using Classes;
 
 namespace MusicCatalog {
 
@@ -18,7 +16,6 @@ namespace MusicCatalog {
 
             if (catalog == null) {
                 catalog = new Catalog(CatalogNameTextBox.Text);
-
                 mainForm.data.Catalogs.Add(catalog);
             }
 

@@ -41,7 +41,7 @@
             this.ArtistNameLabel.Location = new System.Drawing.Point(12, 87);
             this.ArtistNameLabel.Name = "ArtistNameLabel";
             this.ArtistNameLabel.Size = new System.Drawing.Size(59, 13);
-            this.ArtistNameLabel.TabIndex = 0;
+            this.ArtistNameLabel.TabIndex = 9;
             this.ArtistNameLabel.Text = "Artist name";
             // 
             // ArtistNameTextBox
@@ -49,7 +49,7 @@
             this.ArtistNameTextBox.Location = new System.Drawing.Point(12, 103);
             this.ArtistNameTextBox.Name = "ArtistNameTextBox";
             this.ArtistNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.ArtistNameTextBox.TabIndex = 1;
+            this.ArtistNameTextBox.TabIndex = 3;
             // 
             // SongNameLabel
             // 
@@ -57,7 +57,7 @@
             this.SongNameLabel.Location = new System.Drawing.Point(12, 126);
             this.SongNameLabel.Name = "SongNameLabel";
             this.SongNameLabel.Size = new System.Drawing.Size(61, 13);
-            this.SongNameLabel.TabIndex = 2;
+            this.SongNameLabel.TabIndex = 10;
             this.SongNameLabel.Text = "Song name";
             // 
             // SongNameTextBox
@@ -65,14 +65,14 @@
             this.SongNameTextBox.Location = new System.Drawing.Point(15, 142);
             this.SongNameTextBox.Name = "SongNameTextBox";
             this.SongNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.SongNameTextBox.TabIndex = 3;
+            this.SongNameTextBox.TabIndex = 4;
             // 
             // OkButton
             // 
             this.OkButton.Location = new System.Drawing.Point(12, 168);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(127, 23);
-            this.OkButton.TabIndex = 4;
+            this.OkButton.TabIndex = 5;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -83,7 +83,7 @@
             this.SongFormCancelButton.Location = new System.Drawing.Point(145, 168);
             this.SongFormCancelButton.Name = "SongFormCancelButton";
             this.SongFormCancelButton.Size = new System.Drawing.Size(127, 23);
-            this.SongFormCancelButton.TabIndex = 5;
+            this.SongFormCancelButton.TabIndex = 6;
             this.SongFormCancelButton.Text = "Cancel";
             this.SongFormCancelButton.UseVisualStyleBackColor = true;
             this.SongFormCancelButton.Click += new System.EventHandler(this.SongFormCancelButton_Click_1);
@@ -94,7 +94,7 @@
             this.CatalogNameLabel.Location = new System.Drawing.Point(12, 9);
             this.CatalogNameLabel.Name = "CatalogNameLabel";
             this.CatalogNameLabel.Size = new System.Drawing.Size(72, 13);
-            this.CatalogNameLabel.TabIndex = 6;
+            this.CatalogNameLabel.TabIndex = 7;
             this.CatalogNameLabel.Text = "Catalog name";
             // 
             // CatalogNameTextBox
@@ -102,7 +102,7 @@
             this.CatalogNameTextBox.Location = new System.Drawing.Point(12, 25);
             this.CatalogNameTextBox.Name = "CatalogNameTextBox";
             this.CatalogNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.CatalogNameTextBox.TabIndex = 7;
+            this.CatalogNameTextBox.TabIndex = 1;
             // 
             // DiskNameLabel
             // 
@@ -118,7 +118,7 @@
             this.DiskNameTextBox.Location = new System.Drawing.Point(12, 64);
             this.DiskNameTextBox.Name = "DiskNameTextBox";
             this.DiskNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.DiskNameTextBox.TabIndex = 9;
+            this.DiskNameTextBox.TabIndex = 2;
             // 
             // SongForm
             // 

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using Entities;
-using Classes;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
+using Entities;
+using Classes;
 
 namespace MusicCatalog {
 
@@ -26,24 +25,34 @@ namespace MusicCatalog {
             CatalogForm cnf = new CatalogForm();
             cnf.Owner = this;
             cnf.Show();
+            Enabled = false;
         }
 
         private void AddDiskButton_Click(object sender, EventArgs e) {
             DiskForm dnf = new DiskForm();
             dnf.Owner = this;
             dnf.Show();
+            Enabled = false;
         }
 
         private void AddSongButton_Click(object sender, EventArgs e) {
             SongForm sf = new SongForm();
             sf.Owner = this;
             sf.Show();
+            Enabled = false;
         }
 
         private void SaveButton_Click(object sender, EventArgs e) {
             XmlSerializer serializer = new XmlSerializer(typeof(Data));
             using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Create)) {
                 serializer.Serialize(fileStream, data);
+                fileStream.Close();
+            }
+
+            using (FileStream fileStream = new FileStream("../../data.dat", FileMode.Create)) {
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                binaryFormatter.Serialize(fileStream, data);
+                fileStream.Close();
             }
         }
 
@@ -78,14 +87,15 @@ namespace MusicCatalog {
 
                     foreach (Song song in disk.Songs) {
                         TreeNode songNode = new TreeNode();
-                        var songNodes = diskNode.Nodes.Find(song.Artist + " " + song.Name, false);
+                        string fullSongName = song.Artist + " - " + song.Name;
+                        var songNodes = diskNode.Nodes.Find(fullSongName, false);
 
                         if (songNodes.Count() == 0) {
                             songNode = new TreeNode {
-                                Name = song.Artist + " " + song.Name,
-                                Text = song.Artist + " " + song.Name
+                                Name = fullSongName,
+                                Text = fullSongName
                             };
-                            diskNode.Nodes.Add(diskNode);
+                            diskNode.Nodes.Add(songNode);
                         } else {
                             songNode = songNodes.First();
                         }

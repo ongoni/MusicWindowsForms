@@ -4,12 +4,12 @@ using System.Xml.Serialization;
 
 namespace Entities {
 
-    [XmlRoot("Data")]
+    [Serializable]
     public class Catalog {
 
-        public List<Disk> Disks;
-
         public string Name { get; set; }
+
+        public List<Disk> Disks;
 
         public Catalog() {
             Disks = new List<Disk>();
@@ -20,6 +20,7 @@ namespace Entities {
             Disks = new List<Disk>();
         }
 
+        [XmlIgnore]
         public List<Disk> enumerator {
             get { return Disks; }
         }

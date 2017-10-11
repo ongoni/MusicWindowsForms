@@ -37,7 +37,7 @@
             this.DiskNameLabel.Location = new System.Drawing.Point(12, 48);
             this.DiskNameLabel.Name = "DiskNameLabel";
             this.DiskNameLabel.Size = new System.Drawing.Size(57, 13);
-            this.DiskNameLabel.TabIndex = 0;
+            this.DiskNameLabel.TabIndex = 6;
             this.DiskNameLabel.Text = "Disk name";
             // 
             // DiskNameTextBox
@@ -45,14 +45,14 @@
             this.DiskNameTextBox.Location = new System.Drawing.Point(12, 64);
             this.DiskNameTextBox.Name = "DiskNameTextBox";
             this.DiskNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.DiskNameTextBox.TabIndex = 1;
+            this.DiskNameTextBox.TabIndex = 2;
             // 
             // OkButton
             // 
             this.OkButton.Location = new System.Drawing.Point(12, 90);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(127, 23);
-            this.OkButton.TabIndex = 2;
+            this.OkButton.TabIndex = 3;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -63,7 +63,7 @@
             this.DiskFormCancelButton.Location = new System.Drawing.Point(145, 90);
             this.DiskFormCancelButton.Name = "DiskFormCancelButton";
             this.DiskFormCancelButton.Size = new System.Drawing.Size(127, 23);
-            this.DiskFormCancelButton.TabIndex = 3;
+            this.DiskFormCancelButton.TabIndex = 4;
             this.DiskFormCancelButton.Text = "Cancel";
             this.DiskFormCancelButton.UseVisualStyleBackColor = true;
             this.DiskFormCancelButton.Click += new System.EventHandler(this.DiskFormCancelButton_Click);
@@ -74,7 +74,7 @@
             this.CatalogNameLabel.Location = new System.Drawing.Point(12, 9);
             this.CatalogNameLabel.Name = "CatalogNameLabel";
             this.CatalogNameLabel.Size = new System.Drawing.Size(72, 13);
-            this.CatalogNameLabel.TabIndex = 4;
+            this.CatalogNameLabel.TabIndex = 5;
             this.CatalogNameLabel.Text = "Catalog name";
             // 
             // CatalogNameTextBox
@@ -82,7 +82,7 @@
             this.CatalogNameTextBox.Location = new System.Drawing.Point(12, 25);
             this.CatalogNameTextBox.Name = "CatalogNameTextBox";
             this.CatalogNameTextBox.Size = new System.Drawing.Size(260, 20);
-            this.CatalogNameTextBox.TabIndex = 5;
+            this.CatalogNameTextBox.TabIndex = 1;
             // 
             // DiskForm
             // 

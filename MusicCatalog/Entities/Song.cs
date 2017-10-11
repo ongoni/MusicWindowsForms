@@ -3,10 +3,12 @@
 namespace Entities {
 
     [Serializable]
-    public class Song : IComparable<Song> {
+    public class Song {
 
         public string Artist { get; set; }
         public string Name { get; set; }
+
+        public Song() { }
 
         public Song(string artist, string name) {
             Artist = artist;

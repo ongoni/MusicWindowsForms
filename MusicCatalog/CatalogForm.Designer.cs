@@ -35,7 +35,7 @@
             this.CatalogNameLabel.Location = new System.Drawing.Point(12, 9);
             this.CatalogNameLabel.Name = "CatalogNameLabel";
             this.CatalogNameLabel.Size = new System.Drawing.Size(72, 13);
-            this.CatalogNameLabel.TabIndex = 0;
+            this.CatalogNameLabel.TabIndex = 4;
             this.CatalogNameLabel.Text = "Catalog name";
             // 
             // CatalogNameTextBox
