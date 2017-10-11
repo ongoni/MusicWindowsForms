@@ -45,18 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogNameForm.cs">
+    <Compile Include="CatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CatalogNameForm.Designer.cs">
-      <DependentUpon>CatalogNameForm.cs</DependentUpon>
+    <Compile Include="CatalogForm.Designer.cs">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
-    <Compile Include="DiskNameForm.cs">
+    <Compile Include="Classes\Data.cs" />
+    <Compile Include="DiskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiskNameForm.Designer.cs">
-      <DependentUpon>DiskNameForm.cs</DependentUpon>
+    <Compile Include="DiskForm.Designer.cs">
+      <DependentUpon>DiskForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Catalog.cs" />
     <Compile Include="Entities\Disk.cs" />
@@ -75,11 +75,11 @@
     <Compile Include="SongForm.Designer.cs">
       <DependentUpon>SongForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CatalogNameForm.resx">
-      <DependentUpon>CatalogNameForm.cs</DependentUpon>
+    <EmbeddedResource Include="CatalogForm.resx">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DiskNameForm.resx">
-      <DependentUpon>DiskNameForm.cs</DependentUpon>
+    <EmbeddedResource Include="DiskForm.resx">
+      <DependentUpon>DiskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

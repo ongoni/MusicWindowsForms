@@ -32,6 +32,7 @@
             this.AddDiskButton = new System.Windows.Forms.Button();
             this.AddSongButton = new System.Windows.Forms.Button();
             this.CatalogTree = new System.Windows.Forms.TreeView();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddCatalogButton
@@ -71,11 +72,22 @@
             this.CatalogTree.Size = new System.Drawing.Size(654, 537);
             this.CatalogTree.TabIndex = 4;
             // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(12, 131);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(100, 23);
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CatalogTree);
             this.Controls.Add(this.AddSongButton);
             this.Controls.Add(this.AddDiskButton);
@@ -86,7 +98,9 @@
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalog";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
@@ -98,6 +112,7 @@
         private System.Windows.Forms.Button AddDiskButton;
         private System.Windows.Forms.Button AddSongButton;
         private System.Windows.Forms.TreeView CatalogTree;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
 

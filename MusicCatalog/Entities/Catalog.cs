@@ -1,39 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Entities {
 
-    [Serializable]
-    class Catalog {
+    [XmlRoot("Data")]
+    public class Catalog {
 
-        private List<Disk> catalog;
+        public List<Disk> Disks;
 
         public string Name { get; set; }
 
         public Catalog() {
-            catalog = new List<Disk>();
+            Disks = new List<Disk>();
         }
 
         public Catalog(string name) {
             Name = name;
-            catalog = new List<Disk>();
+            Disks = new List<Disk>();
         }
 
         public List<Disk> enumerator {
-            get { return catalog; }
+            get { return Disks; }
         }
 
         public void Add(Disk disk) {
-            catalog.Add(disk);
+            Disks.Add(disk);
         }
 
         public void Remove(Disk disk) {
-            catalog.Remove(disk);
+            Disks.Remove(disk);
+        }
+
+        public Disk Find(string name) {
+            return Disks.Find(x => x.Name == name);
         }
 
         public Disk FindAll(string artist) {
             Disk found = new Disk();
-            foreach (Disk disk in catalog) {
+            foreach (Disk disk in Disks) {
                 found.Add(disk.FindAll(artist));
             }
 
@@ -41,13 +46,13 @@ namespace Entities {
         }
 
         public void Sort() {
-            foreach (Disk disk in catalog) {
+            foreach (Disk disk in Disks) {
                 disk.Sort();
             }
         }
 
         public void Print() {
-            foreach (Disk disk in catalog) {
+            foreach (Disk disk in Disks) {
                 disk.Print();
             }
         }

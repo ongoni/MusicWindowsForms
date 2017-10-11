@@ -4,48 +4,48 @@ using System.Collections.Generic;
 namespace Entities {
 
     [Serializable]
-    class Disk {
+    public class Disk {
 
-        private List<Song> disk;
+        public List<Song> Songs;
 
         public string Name { get; set; }
 
         public Disk() {
-            disk = new List<Song>();
+            Songs = new List<Song>();
         }
 
         public Disk(string name) {
             Name = name;
-            disk = new List<Song>();
+            Songs = new List<Song>();
         }
 
         public List<Song> enumerator {
-            get { return disk; }
+            get { return Songs; }
         }
 
         public void Add(Song song) {
-            disk.Add(song);
+            Songs.Add(song);
         }
 
         public void Add(List<Song> other) {
-            disk.AddRange(other);
+            Songs.AddRange(other);
         }
 
         public void Remove(Song song) {
-            disk.Remove(song);
+            Songs.Remove(song);
         }
 
         public List<Song> FindAll(string artist) {
-            List<Song> found = disk.FindAll(item => item.Artist == artist);
+            List<Song> found = Songs.FindAll(item => item.Artist == artist);
             return found;
         }
 
         public void Sort() {
-            disk.Sort();
+            Songs.Sort();
         }
 
         public void Print() {
-            foreach (Song song in disk) {
+            foreach (Song song in Songs) {
                 Console.WriteLine(song);
             }
         }
