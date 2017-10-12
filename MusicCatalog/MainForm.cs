@@ -20,20 +20,17 @@ namespace MusicCatalog {
         }
 
         private void AddCatalogButton_Click(object sender, EventArgs e) {
-            CatalogForm cnf = new CatalogForm();
-            cnf.Owner = this;
+            CatalogForm cnf = new CatalogForm { Owner = this };
             cnf.Show();
         }
 
         private void AddDiskButton_Click(object sender, EventArgs e) {
-            DiskForm dnf = new DiskForm();
-            dnf.Owner = this;
+            DiskForm dnf = new DiskForm { Owner = this };
             dnf.Show();
         }
 
         private void AddSongButton_Click(object sender, EventArgs e) {
-            SongForm sf = new SongForm();
-            sf.Owner = this;
+            SongForm sf = new SongForm { Owner = this };
             sf.Show();
         }
 

@@ -20,10 +20,10 @@ namespace MusicCatalog.Entities {
         }
 
         public int CompareTo(Song other) {
-            if (Artist.CompareTo(other.Artist) > 0) return 1;
-            if (Artist.CompareTo(other.Artist) < 0) return -1;
-            if (Name.CompareTo(other.Name) > 0) return 1;
-            if (Name.CompareTo(other.Name) < 0) return -1;
+            if (String.Compare(Artist, other.Artist, StringComparison.Ordinal) > 0) return 1;
+            if (String.Compare(Artist, other.Artist, StringComparison.Ordinal) < 0) return -1;
+            if (String.Compare(Name, other.Name, StringComparison.Ordinal) > 0) return 1;
+            if (String.Compare(Name, other.Name, StringComparison.Ordinal) < 0) return -1;
 
             return 0;
         }
