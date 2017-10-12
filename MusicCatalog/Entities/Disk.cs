@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Entities {
+namespace MusicCatalog.Entities {
 
     [Serializable]
     public class Disk {
@@ -21,9 +21,7 @@ namespace Entities {
         }
 
         [XmlIgnore]
-        public List<Song> enumerator {
-            get { return Songs; }
-        }
+        public List<Song> enumerator { get; }
 
         public void Add(Song song) {
             Songs.Add(song);

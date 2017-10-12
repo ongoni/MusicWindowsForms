@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Entities;
+using MusicCatalog.Entities;
 
 namespace MusicCatalog {
 
@@ -12,8 +12,8 @@ namespace MusicCatalog {
 
         private void OkButton_Click(object sender, EventArgs e) {
             MainForm mainForm = (MainForm) Owner;
-            if (mainForm.data.Catalogs.Find(x => x.Name == CatalogNameTextBox.Text) == null) {
-                mainForm.data.Catalogs.Add(new Catalog(CatalogNameTextBox.Text));
+            if (mainForm.Data.Catalogs.Find(x => x.Name == CatalogNameTextBox.Text) == null) {
+                mainForm.Data.Catalogs.Add(new Catalog(CatalogNameTextBox.Text));
             }
 
             Close();

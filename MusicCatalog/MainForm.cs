@@ -6,14 +6,14 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml;
-using Entities;
-using Classes;
+using MusicCatalog.Classes;
+using MusicCatalog.Entities;
 
 namespace MusicCatalog {
 
     public partial class MainForm : Form {
 
-        public Data data = new Data();
+        public Data Data = new Data();
 
         public MainForm() {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace MusicCatalog {
             using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Open)) {
                 XmlReader reader = XmlReader.Create(fileStream);
                 Data deserializedData = (Data) serializer.Deserialize(reader);
-                data = deserializedData;
+                Data = deserializedData;
             }
         }
 
@@ -49,14 +49,14 @@ namespace MusicCatalog {
         private void SaveButton_Click(object sender, EventArgs e) {
             XmlSerializer serializer = new XmlSerializer(typeof(Data));
             using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Create)) {
-                serializer.Serialize(fileStream, data);
+                serializer.Serialize(fileStream, Data);
                 fileStream.Close();
             }
 
             using (FileStream fileStream = new FileStream("../../data.dat", FileMode.Create)) {
                 BinaryFormatter binaryFormatter = new BinaryFormatter();
                 try {
-                    binaryFormatter.Serialize(fileStream, data);
+                    binaryFormatter.Serialize(fileStream, Data);
                 } catch (SerializationException ex) {
                     Console.WriteLine(ex.Message);
                 } finally {
@@ -66,11 +66,11 @@ namespace MusicCatalog {
         }
 
         private void MainForm_Activated(object sender, EventArgs e) {
-            foreach (Catalog catalog in data.Catalogs) {
-                TreeNode catalogNode = new TreeNode();
+            foreach (Catalog catalog in Data.Catalogs) {
+                TreeNode catalogNode;
                 var catalogNodes = CatalogTree.Nodes.Find(catalog.Name, false);
 
-                if (catalogNodes.Count() == 0) {
+                if (!catalogNodes.Any()) {
                     catalogNode = new TreeNode {
                         Name = catalog.Name,
                         Text = catalog.Name
@@ -81,10 +81,10 @@ namespace MusicCatalog {
                 }
 
                 foreach (Disk disk in catalog.Disks) {
-                    TreeNode diskNode = new TreeNode();
+                    TreeNode diskNode;
                     var diskNodes = catalogNode.Nodes.Find(disk.Name, false);
 
-                    if (diskNodes.Count() == 0) {
+                    if (!diskNodes.Any()) {
                         diskNode = new TreeNode {
                             Name = disk.Name,
                             Text = disk.Name
@@ -95,18 +95,14 @@ namespace MusicCatalog {
                     }
 
                     foreach (Song song in disk.Songs) {
-                        TreeNode songNode = new TreeNode();
                         string fullSongName = song.Artist + " - " + song.Name;
                         var songNodes = diskNode.Nodes.Find(fullSongName, false);
 
-                        if (songNodes.Count() == 0) {
-                            songNode = new TreeNode {
+                        if (!songNodes.Any()) {
+                            diskNode.Nodes.Add(new TreeNode {
                                 Name = fullSongName,
                                 Text = fullSongName
-                            };
-                            diskNode.Nodes.Add(songNode);
-                        } else {
-                            songNode = songNodes.First();
+                            });
                         }
                     }
                 }

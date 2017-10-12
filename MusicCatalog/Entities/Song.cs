@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entities {
+namespace MusicCatalog.Entities {
 
     [Serializable]
     public class Song {
@@ -22,12 +22,10 @@ namespace Entities {
         public int CompareTo(Song other) {
             if (Artist.CompareTo(other.Artist) > 0) return 1;
             if (Artist.CompareTo(other.Artist) < 0) return -1;
-            else {
-                if (Name.CompareTo(other.Name) > 0) return 1;
-                if (Name.CompareTo(other.Name) < 0) return -1;
+            if (Name.CompareTo(other.Name) > 0) return 1;
+            if (Name.CompareTo(other.Name) < 0) return -1;
 
-                return 0;
-            }
+            return 0;
         }
 
     }

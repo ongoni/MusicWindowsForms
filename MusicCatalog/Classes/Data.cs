@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Entities;
+using MusicCatalog.Entities;
 
-namespace Classes {
+namespace MusicCatalog.Classes {
 
     [Serializable]
     public class Data {
