@@ -19,15 +19,6 @@ namespace MusicCatalog {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e) {
-            XmlSerializer serializer = new XmlSerializer(typeof(Data));
-            using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Open)) {
-                XmlReader reader = XmlReader.Create(fileStream);
-                Data deserializedData = (Data) serializer.Deserialize(reader);
-                Data = deserializedData;
-            }
-        }
-
         private void AddCatalogButton_Click(object sender, EventArgs e) {
             CatalogForm cnf = new CatalogForm();
             cnf.Owner = this;
@@ -47,8 +38,8 @@ namespace MusicCatalog {
         }
 
         private void SaveButton_Click(object sender, EventArgs e) {
-            XmlSerializer serializer = new XmlSerializer(typeof(Data));
             using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Create)) {
+                XmlSerializer serializer = new XmlSerializer(typeof(Data));
                 serializer.Serialize(fileStream, Data);
                 fileStream.Close();
             }
@@ -63,6 +54,27 @@ namespace MusicCatalog {
                     fileStream.Close();
                 }
             }
+        }
+
+        private void LoadFromBinaryButton_Click(object sender, EventArgs e) {
+            CatalogTree.Nodes.Clear();
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            using (FileStream fileStream = new FileStream("../../data.dat", FileMode.Open)) {
+                Data deserializedData = (Data) binaryFormatter.Deserialize(fileStream);
+                Data = deserializedData;
+            }
+            MainForm_Activated(sender, e);
+        }
+
+        private void LoadFromXmlButton_Click(object sender, EventArgs e) {
+            CatalogTree.Nodes.Clear();
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Data));
+            using (FileStream fileStream = new FileStream("../../data.xml", FileMode.Open)) {
+                XmlReader reader = XmlReader.Create(fileStream);
+                Data deserializedData = (Data) xmlSerializer.Deserialize(reader);
+                Data = deserializedData;
+            }
+            MainForm_Activated(sender, e);
         }
 
         private void MainForm_Activated(object sender, EventArgs e) {

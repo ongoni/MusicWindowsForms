@@ -33,6 +33,8 @@
             this.AddSongButton = new System.Windows.Forms.Button();
             this.CatalogTree = new System.Windows.Forms.TreeView();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.LoadFromBinaryButton = new System.Windows.Forms.Button();
+            this.LoadFromXmlButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddCatalogButton
@@ -82,11 +84,33 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // LoadFromBinaryButton
+            // 
+            this.LoadFromBinaryButton.Location = new System.Drawing.Point(12, 160);
+            this.LoadFromBinaryButton.Name = "LoadFromBinaryButton";
+            this.LoadFromBinaryButton.Size = new System.Drawing.Size(100, 23);
+            this.LoadFromBinaryButton.TabIndex = 5;
+            this.LoadFromBinaryButton.Text = "Load binary data";
+            this.LoadFromBinaryButton.UseVisualStyleBackColor = true;
+            this.LoadFromBinaryButton.Click += new System.EventHandler(this.LoadFromBinaryButton_Click);
+            // 
+            // LoadFromXmlButton
+            // 
+            this.LoadFromXmlButton.Location = new System.Drawing.Point(12, 189);
+            this.LoadFromXmlButton.Name = "LoadFromXmlButton";
+            this.LoadFromXmlButton.Size = new System.Drawing.Size(100, 23);
+            this.LoadFromXmlButton.TabIndex = 6;
+            this.LoadFromXmlButton.Text = "Load xml data";
+            this.LoadFromXmlButton.UseVisualStyleBackColor = true;
+            this.LoadFromXmlButton.Click += new System.EventHandler(this.LoadFromXmlButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.LoadFromXmlButton);
+            this.Controls.Add(this.LoadFromBinaryButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CatalogTree);
             this.Controls.Add(this.AddSongButton);
@@ -101,7 +125,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalog";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -113,6 +136,8 @@
         private System.Windows.Forms.Button AddSongButton;
         private System.Windows.Forms.TreeView CatalogTree;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button LoadFromBinaryButton;
+        private System.Windows.Forms.Button LoadFromXmlButton;
     }
 }
 

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Catalogs>
+    <Catalog>
+      <Disks>
+        <Disk>
+          <Songs>
+            <Song>
+              <Artist>3</Artist>
+              <Name>4</Name>
+            </Song>
+            <Song>
+              <Artist>5</Artist>
+              <Name>6</Name>
+            </Song>
+          </Songs>
+          <Name>2</Name>
+        </Disk>
+      </Disks>
+      <Name>1</Name>
+    </Catalog>
+    <Catalog>
+      <Disks>
+        <Disk>
+          <Songs>
+            <Song>
+              <Artist>4</Artist>
+              <Name>5</Name>
+            </Song>
+          </Songs>
+          <Name>3</Name>
+        </Disk>
+      </Disks>
+      <Name>2</Name>
+    </Catalog>
+  </Catalogs>
+</Data>
